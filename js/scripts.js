@@ -1,7 +1,17 @@
-$('#button').click(function(){
+$(document).ready(function() {
+  $("#button").click(function() {
+    displayPics();
+  });
+});
 
-document.getElementById("myImages").src = images[randomNum];
+function displayPics(){
 
-let images = ['images/canada.jpg', 'images/china.jpg', 'images/egypt.jpg', 'images/hollywood.jpg', 'images/london.jpg', 'images/newyork.jpg', 'images/paris.jpg', 'images/sahara.jpg', 'images/sydney.jpg'];
+  let imagesArray = new Array();
 
-let randomNum = images[Math.floor(Math.random()*images.length)];
+  imagesArray = ['canada.jpg', 'china.jpg', 'egypt.jpg', 'hollywood.jpg', 'london.jpg', 'newyork.jpg', 'paris.jpg', 'sahara.jpg', 'sydney.jpg'];
+
+  let randomNum = Math.floor(Math.random()*imagesArray.length);
+  let img = imagesArray[randomNum];
+
+  $(".modal-image").attr("src", img);
+}
