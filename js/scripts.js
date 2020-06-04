@@ -13,5 +13,5 @@ function displayPics(){
   let randomNum = Math.floor(Math.random()*imagesArray.length);
   let img = imagesArray[randomNum];
 
-  $(".modal-image").attr("src", img);
+  $('#myImages').attr('src', 'images/'+img);
 }
